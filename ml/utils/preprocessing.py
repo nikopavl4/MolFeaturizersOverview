@@ -115,7 +115,7 @@ def preprocessing_pipeline(df,tasks,args):
                 df = df.drop(labels=i, axis=0)
 
             features = np.stack(features)
-            features = np.nan_to_num(features)
+    features = np.nan_to_num(features)
 
     if (args.featurizer.lower() == 'bpsymmetry'):
         features = features.reshape(features.shape[0], 800)
